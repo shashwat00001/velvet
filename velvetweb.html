@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+    <link rel="stylesheet" href="">
+    <style>
+    				* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    float: right;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    background-image: url('file:///storage/emulated/0/Velvet/Background 1.jpg');
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding-top: 150px;
+}
+
+.hero h2 {
+    font-size: 3em;
+}
+
+#menu {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: space-around;
+}
+
+.item {
+    background-color: aqua;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    
+}
+.item img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+#contact {
+    padding: 50px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+}
+
+input, textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 1em;
+    
+}
+
+button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+.name:hover{
+				border: 2px solid brown;
+}
+#submit:hover{
+				color: brown;
+				background-color: wheat;
+}
+#submit{
+				border-radius: 19px;
+}
+.name{
+				border-radius: 10px;
+				border: 2px solid black;
+}
+.hov:hover{
+				text-decoration: underline #fcebeb;
+				
+}
+
+    </style>
+    <script>
+    				document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    alert(`Thank you, ${name}. Your message has been Submitted!`);
+    
+    // Clear the form
+    document.getElementById('contact-form').reset();
+});
+
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">Velvet</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="hov">Home</a></li>
+                    <li><a href="#menu"class="hov">Menu</a></li>
+                    <li><a href="#contact"class="hov">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home">
+        <div class="hero">
+            <h2>Welcome to Velvet Restaurant</h2>
+            <p>Exquisite Dining Experience</p>
+        </div>
+    </section>
+
+    <section id="menu">
+    <div class="container">
+        <h2>Our Menu</h2>
+        <div class="menu-items">
+            <div class="item">
+                <img src="file:///storage/emulated/0/Velvet/Momo.jpg" alt="Grilled Salmon">
+                <h3>Momos</h3>
+                <p>₹100 </p>
+            </div>
+            <div class="item">
+                <img src="file:///storage/emulated/0/Velvet/pizza .jpg" alt="Steak with Garlic Butter">
+                <h3>Pizza</h3>
+                <p>₹300</p>
+            </div>
+            <div class="item">
+                <img src="file:///storage/emulated/0/Velvet/Burger.jpg" alt="Vegan Pasta">
+                <h3>Burger</h3>
+                <p>₹150</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form id="contact-form" action="index.html">
+                <label for="name">Name:</label>
+                <input type="text" class="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required class="name">
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required class="name"></textarea>
+
+                <button type="submit" id="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Velvet. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="school.js"></script>
+</body>
+</html>
